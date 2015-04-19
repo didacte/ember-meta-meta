@@ -34,7 +34,10 @@
     "ember-try": "0.0.4"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "title",
+    "description",
+    "seo"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.0.0"
