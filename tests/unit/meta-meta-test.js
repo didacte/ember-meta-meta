@@ -27,3 +27,16 @@ test('Default values', function(assert) {
     assert.equal(meta('og:image'), 'https://exemple.net/my-logo.png');
   });
 });
+
+
+test('News page value', function(assert) {
+  assert.expect(3);
+
+  visit('/news');
+
+  andThen(function() {
+    assert.equal(title(), 'This Is News Title');
+    assert.equal(description(), 'This Is News Description');
+    assert.equal(meta('og:image'), 'https://exemple.net/latest-news.png');
+  });
+});

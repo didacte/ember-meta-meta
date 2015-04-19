@@ -2,6 +2,10 @@
 
 > meta meta
 
+## Usage
+
+    ember install:addon ember-meta-meta
+
 ## Installation
 
 * `git clone` this repository
