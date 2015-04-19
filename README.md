@@ -1,6 +1,6 @@
 # ember-cli-meta-meta
 
-> meta meta
+> Addon to set title & meta tags in your EmberJS application
 
 ## Usage
 
