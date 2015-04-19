@@ -22,7 +22,7 @@ test('Default values', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.equal(title(), 'This Is Default Dummy Title');
+    assert.ok(title().match(new RegExp("^This Is Default Dummy Title")));
     assert.equal(description(), 'This Is Default Dummy Description');
     assert.equal(meta('og:image'), 'https://exemple.net/my-logo.png');
   });
@@ -35,7 +35,7 @@ test('News page value', function(assert) {
   visit('/news');
 
   andThen(function() {
-    assert.equal(title(), 'This Is News Title');
+    assert.ok(title().match(new RegExp("^This Is News Title")));
     assert.equal(description(), 'This Is News Description');
     assert.equal(meta('og:image'), 'https://exemple.net/latest-news.png');
   });
