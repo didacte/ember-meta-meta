@@ -1,9 +1,13 @@
 Ember.Route.reopen({
   setMetas: function(attributes) {
+    var self = this;
     Ember.keys(attributes).forEach(function(key){
-      this.setMeta(key, attributes[key]);
-    }.bind(this))
-  },
+      self.router.setMeta(key, attributes[key]);
+    });
+  }
+});
+
+Ember.Router.reopen({
   setMeta: function(name, value) {
     if (name === 'title') {
       window.document.title = value;
