@@ -1,10 +1,10 @@
-# ember-meta-meta
+# ember-cli-meta-meta
 
 > meta meta
 
 ## Usage
 
-    ember install:addon ember-meta-meta
+    ember install:addon ember-cli-meta-meta
 
 ## Installation
 
