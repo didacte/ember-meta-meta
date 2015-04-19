@@ -2,6 +2,8 @@
 
 > Addon to set title & meta tags in your EmberJS application
 
+[![Circle CI](https://circleci.com/gh/didacte/ember-cli-meta-meta/tree/master.svg?style=svg)](https://circleci.com/gh/didacte/ember-cli-meta-meta/tree/master)
+
 ## Usage
 
     ember install:addon ember-cli-meta-meta
