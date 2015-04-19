@@ -20,24 +20,12 @@ Then set desired metas in your controller setup :
       }
     });
 
-## Installation
+## Contributing
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+Use GitHub issues for questions, issues and feature requests.
 
-## Running
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on contributing and running test.
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+## Credits
 
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Jean-Philippe Doyle
