@@ -1,0 +1,7 @@
+{
+  "files": {
+    "included": [
+      "vendor/meta-meta/*.js"
+    ]
+  }
+}
