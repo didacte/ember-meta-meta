@@ -6,6 +6,18 @@
 
     ember install:addon ember-cli-meta-meta
 
+Then set desired metas in your controller setup :
+
+    export default Ember.Route.extend({
+      setupController: function (controller, model) {
+        this.setMetas({
+          title: 'This Is News Title',
+          description: 'This Is News Description',
+          'og:image': 'https://exemple.net/latest-news.png'
+        });
+      }
+    });
+
 ## Installation
 
 * `git clone` this repository
