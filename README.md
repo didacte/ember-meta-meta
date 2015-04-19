@@ -1,6 +1,6 @@
-# Ember-meta-meta
+# ember-meta-meta
 
-This README outlines the details of collaborating on this Ember addon.
+> meta meta
 
 ## Installation
 
