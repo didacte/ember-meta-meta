@@ -37,6 +37,7 @@
     "ember-addon",
     "title",
     "description",
+    "meta",
     "seo"
   ],
   "dependencies": {
