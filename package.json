@@ -1,5 +1,5 @@
 {
-  "name": "ember-cli-meta-meta",
+  "name": "ember-meta-meta",
   "version": "0.0.0",
   "description": "Add sane metas to your Ember frontend applicaiton.",
   "directories": {
@@ -11,7 +11,7 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "github.com/didacte/ember-cli-meta-meta",
+  "repository": "",
   "engines": {
     "node": ">= 0.10.0"
   },

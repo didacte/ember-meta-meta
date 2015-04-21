@@ -6,7 +6,7 @@ import Ember from 'ember';
 
 var App, Router;
 
-module('ember-cli-meta-meta', {
+module('ember-meta-meta', {
   setup: function() {
     App = startApp();
     Router = App.__container__.lookup('router:main');
