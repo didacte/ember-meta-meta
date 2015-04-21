@@ -2,10 +2,10 @@
 
 > Addon to set title & meta tags in your EmberJS application
 
-[![Circle CI](https://circleci.com/gh/didacte/ember-cli-meta-meta/tree/master.svg?style=svg)](https://circleci.com/gh/didacte/ember-cli-meta-meta/tree/master)
-[![Dependency Status](https://david-dm.org/didacte/ember-cli-meta-meta.svg)](https://david-dm.org/didacte/ember-cli-meta-meta)
-[![Code Climate](https://codeclimate.com/github/didacte/ember-cli-meta-meta/badges/gpa.svg)](https://codeclimate.com/github/didacte/ember-cli-meta-meta)
-[![Inline docs](http://inch-ci.org/github/didacte/ember-cli-meta-meta.svg?branch=master)](http://inch-ci.org/github/didacte/ember-cli-meta-meta)
+[![Circle CI](https://circleci.com/gh/didacte/ember-meta-meta/tree/master.svg?style=svg)](https://circleci.com/gh/didacte/ember-meta-meta/tree/master)
+[![Dependency Status](https://david-dm.org/didacte/ember-meta-meta.svg)](https://david-dm.org/didacte/ember-meta-meta)
+[![Code Climate](https://codeclimate.com/github/didacte/ember-meta-meta/badges/gpa.svg)](https://codeclimate.com/github/didacte/ember-meta-meta)
+[![Inline docs](http://inch-ci.org/github/didacte/ember-meta-meta.svg?branch=master)](http://inch-ci.org/github/didacte/ember-meta-meta)
 
 ## Usage
 
