@@ -11,7 +11,10 @@
     "build": "ember build",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/didacte/ember-meta-meta.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
