@@ -15,8 +15,9 @@ Then set desired metas in your controller setup :
 
 ```js
 export default Ember.Route.extend({
+  meta: Ember.inject.service(),
   setupController: function (controller, model) {
-    this.setMetas({
+    this.get('meta').update({
       title: 'This Is News Title',
       description: 'This Is News Description',
       'og:image': 'https://exemple.net/latest-news.png'
