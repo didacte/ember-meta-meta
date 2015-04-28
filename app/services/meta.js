@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+var forEach = Ember.EnumerableUtils.forEach;
+
 export default Ember.Object.extend({
   /**
     Store the default document title
@@ -38,11 +40,10 @@ export default Ember.Object.extend({
   insert: function() {
     var self = this,
         attributes = this.get('attributes') || { title: this.get('defaultTitle') },
-        metas = document.querySelectorAll('meta[data-meta-meta="true"]'),
-        metas = Ember.ArrayProxy.create({ content: Ember.A(metas) });
+        metas = document.querySelectorAll('meta[data-meta-meta="true"]');
 
     // Remove previously set metas
-    metas.forEach(function(meta){
+    forEach(metas, function(meta){
       meta.removeAttribute('content');
     });
 
