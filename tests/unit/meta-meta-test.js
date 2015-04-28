@@ -30,7 +30,7 @@ test('Default values', function(assert) {
 
 
 test('News page value', function(assert) {
-  assert.expect(3);
+  assert.expect(6);
 
   visit('/news');
 
@@ -38,5 +38,13 @@ test('News page value', function(assert) {
     assert.ok(title().match(new RegExp("^This Is News Title")));
     assert.equal(description(), 'This Is News Description');
     assert.equal(meta('og:image'), 'https://exemple.net/latest-news.png');
+  });
+
+  visit('/about');
+
+  andThen(function() {
+    assert.ok(title().match(new RegExp("^About Page")));
+    assert.equal(description(), null);
+    assert.equal(meta('og:image'), null);
   });
 });
