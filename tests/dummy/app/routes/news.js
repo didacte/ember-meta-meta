@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  meta: Ember.inject.service(),
   setupController: function (controller, model) {
     this.get('meta').update({
       title: 'This Is News Title',
