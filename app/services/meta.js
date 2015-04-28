@@ -18,7 +18,8 @@ export default Ember.Object.extend({
     @param {Object} attributes
   */
   update: function(attributes) {
-    var metas = document.querySelectorAll('meta[data-meta-meta="true"]')
+    var config = this.container.lookup('meta-config:main'),
+        metas = document.querySelectorAll('meta[data-meta-meta="true"]'),
         metas = Ember.ArrayProxy.create({ content: Ember.A(metas) });
 
     // Remove previously set metas
@@ -28,10 +29,14 @@ export default Ember.Object.extend({
 
     Ember.keys(attributes).forEach(function(name){
       var value = attributes[name],
-          meta;
+          meta, title;
 
       if (name === 'title') {
-        window.document.title = value;
+        title = value;
+
+        if(config.prefix) title = config.prefix + title;
+
+        window.document.title = title
       } else {
         meta = document.querySelector('meta[name="' + name + '"]');
 
