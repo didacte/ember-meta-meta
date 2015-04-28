@@ -11,7 +11,7 @@
 
     ember install:addon ember-meta-meta
 
-Then set desired metas in your controller setup :
+Set desired metas in your controller setup :
 
 ```js
 export default Ember.Route.extend({
@@ -23,6 +23,21 @@ export default Ember.Route.extend({
     });
   }
 });
+```
+
+## Advanced options
+
+You may override `defaultTitle` options in an application initializer :
+
+```js
+export default {
+  after: 'meta',
+  name: 'defaults',
+  initialize: function(container, application) {
+    var meta = container.lookup('meta:main');
+    meta.set('defaultTitle', 'My Custom Default Title');
+  }
+};
 ```
 
 ## Contributing

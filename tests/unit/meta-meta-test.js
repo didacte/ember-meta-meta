@@ -22,7 +22,7 @@ test('Default values', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^This Is Default Dummy Title")));
+    assert.ok(title().match(new RegExp("^My Custom Default Title")));
     assert.equal(description(), 'This Is Default Dummy Description');
     assert.equal(meta('og:image'), 'https://exemple.net/my-logo.png');
   });
@@ -51,7 +51,7 @@ test('Visit all pages', function(assert) {
   visit('/empty');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^This Is Default Dummy Title")));
+    assert.ok(title().match(new RegExp("^My Custom Default Title")));
     assert.equal(description(), null);
     assert.equal(meta('og:image'), null);
   });
@@ -59,7 +59,7 @@ test('Visit all pages', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^This Is Default Dummy Title")));
+    assert.ok(title().match(new RegExp("^My Custom Default Title")));
     assert.equal(description(), null);
     assert.equal(meta('og:image'), null);
   });
