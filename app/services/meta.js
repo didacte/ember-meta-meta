@@ -56,6 +56,14 @@ export default Ember.Object.extend({
     this.set('attributes', null);
   },
 
+  /**
+    Returns the title, exists solely to be reopen for your needs
+
+    @method title
+  */
+  title: function(value) {
+    return value;
+  },
 
   /**
     Inject given meta in document.
@@ -73,7 +81,7 @@ export default Ember.Object.extend({
     var meta;
 
     if (name === 'title') {
-      window.document.title = value;
+      window.document.title = this.title(value);
     } else {
       meta = document.querySelector('meta[name="' + name + '"]');
 

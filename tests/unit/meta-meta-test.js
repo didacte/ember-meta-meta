@@ -22,7 +22,7 @@ test('Default values', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^My Custom Default Title")));
+    assert.ok(title().match(new RegExp("^My Custom Default Title - My Website")));
     assert.equal(description(), 'This Is Default Dummy Description');
     assert.equal(meta('og:image'), 'https://exemple.net/my-logo.png');
   });
@@ -35,7 +35,7 @@ test('Visit all pages', function(assert) {
   visit('/news');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^This Is News Title")));
+    assert.ok(title().match(new RegExp("^This Is News Title - My Website")));
     assert.equal(description(), 'This Is News Description');
     assert.equal(meta('og:image'), 'https://exemple.net/latest-news.png');
   });
@@ -43,7 +43,7 @@ test('Visit all pages', function(assert) {
   visit('/about');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^This Is About Title")));
+    assert.ok(title().match(new RegExp("^This Is About Title - My Website")));
     assert.equal(description(), null);
     assert.equal(meta('og:image'), null);
   });
@@ -51,7 +51,7 @@ test('Visit all pages', function(assert) {
   visit('/empty');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^My Custom Default Title")));
+    assert.ok(title().match(new RegExp("^My Custom Default Title - My Website")));
     assert.equal(description(), null);
     assert.equal(meta('og:image'), null);
   });
@@ -59,7 +59,7 @@ test('Visit all pages', function(assert) {
   visit('/');
 
   andThen(function() {
-    assert.ok(title().match(new RegExp("^My Custom Default Title")));
+    assert.ok(title().match(new RegExp("^My Custom Default Title - My Website")));
     assert.equal(description(), null);
     assert.equal(meta('og:image'), null);
   });

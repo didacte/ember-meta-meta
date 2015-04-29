@@ -6,7 +6,7 @@ export default {
   initialize: function(container, application) {
     var meta;
 
-    application.register('meta:main', Meta, { singleton: true, initialize: true });
+    application.register('meta:main', Meta.create(), { singleton: true, instantiate: false });
     application.inject('route', 'meta', 'meta:main');
 
     // Store default values

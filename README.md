@@ -25,9 +25,12 @@ export default Ember.Route.extend({
 });
 ```
 
+Title & metas are set only on `didTransition` in case the route would be canceled.
+
 ## Advanced options
 
-You may override `defaultTitle` options in an application initializer :
+- `defaultTitle` : Default title set when none is provided by route.
+- `@title(value)` : Override the title function to append, prefix, etc.
 
 ```js
 export default {
@@ -36,6 +39,11 @@ export default {
   initialize: function(container, application) {
     var meta = container.lookup('meta:main');
     meta.set('defaultTitle', 'My Custom Default Title');
+    meta.reopen({
+      title: function(value){
+        return value + ' - My Website';
+      }
+    });
   }
 };
 ```
