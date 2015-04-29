@@ -30,7 +30,7 @@ test('Default values', function(assert) {
 
 
 test('Visit all pages', function(assert) {
-  assert.expect(12);
+  assert.expect(14);
 
   visit('/news');
 
@@ -38,6 +38,8 @@ test('Visit all pages', function(assert) {
     assert.ok(title().match(new RegExp("^This Is News Title - My Website")));
     assert.equal(description(), 'This Is News Description');
     assert.equal(meta('og:image'), 'https://exemple.net/latest-news.png');
+    // Meta not existing in initial DOM
+    assert.equal(meta('og:description'), 'News Description for Open Graph');
   });
 
   visit('/about');
@@ -46,6 +48,8 @@ test('Visit all pages', function(assert) {
     assert.ok(title().match(new RegExp("^This Is About Title - My Website")));
     assert.equal(description(), null);
     assert.equal(meta('og:image'), null);
+    // Meta not existing in initial DOM
+    assert.equal(meta('og:description'), null);
   });
 
   visit('/empty');

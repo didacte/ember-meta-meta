@@ -88,6 +88,7 @@ export default Ember.Object.extend({
       // Create meta tag if does not exist
       if(!meta) {
         meta = document.createElement('meta');
+        meta.setAttribute('name', name);
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
 
