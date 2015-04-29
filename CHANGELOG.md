@@ -1,3 +1,7 @@
+# 0.1.1
+
+Bugfix : meta name was not set if not already in DOM
+
 # 0.1.0
 
 Breaking change: now using service injection, see updated README (#1).
