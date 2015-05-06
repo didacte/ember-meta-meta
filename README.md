@@ -19,10 +19,20 @@ export default Ember.Route.extend({
     this.get('meta').update({
       title: 'This Is News Title',
       description: 'This Is News Description',
-      'og:image': 'https://exemple.net/latest-news.png'
+      'og:image': 'https://exemple.net/latest-news.png',
+      'twitter:author': '@j15e'
     });
   }
 });
+```
+
+Will result into this HTML (open graph metas are using property automatically) :
+
+```html
+<title>This Is News Title</title>
+<meta name="description" content="This Is News Description">
+<meta property="og:image" content="https://exemple.net/latest-news.png">
+<meta name="twitter:author" content="@j15e">
 ```
 
 Title & metas are set only on `didTransition` in case the route would be canceled.

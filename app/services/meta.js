@@ -78,17 +78,18 @@ export default Ember.Object.extend({
     @param {Object} attributes
   */
   setMeta: function(name, value) {
-    var meta;
+    var meta, key;
 
     if (name === 'title') {
       window.document.title = this.title(value);
     } else {
-      meta = document.querySelector('meta[name="' + name + '"]');
+      key = (name.indexOf('og:') === -1) ? 'name' : 'property';
+      meta = document.querySelector('meta[' + key + '="' + name + '"]');
 
       // Create meta tag if does not exist
       if(!meta) {
         meta = document.createElement('meta');
-        meta.setAttribute('name', name);
+        meta.setAttribute(key, name);
         document.getElementsByTagName('head')[0].appendChild(meta);
       }
 

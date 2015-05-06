@@ -7,6 +7,7 @@ export default Ember.Route.extend({
       description: 'This Is News Description',
       'og:image': 'https://exemple.net/latest-news.png',
       'og:description': 'News Description for Open Graph',
+      'twitter:author': '@j15e'
     });
   }
 });
