@@ -1,3 +1,7 @@
+# 0.1.2
+
+Fix support for Open Graph using `property` vs `name` (#2).
+
 # 0.1.1
 
 Bugfix : meta name was not set if not already in DOM
