@@ -1,4 +1,4 @@
-# ember-meta-meta
+#<img src="https://dl.dropboxusercontent.com/u/15867362/ember-meta-meta.svg" width="250" title="ember-meta-meta by @L-A" title="ember-meta-meta">
 
 > Addon to set title & meta tags in your EmberJS application
 
