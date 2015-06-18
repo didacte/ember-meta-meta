@@ -9,7 +9,7 @@
 
 ## Usage
 
-    ember install:addon ember-meta-meta
+    ember install ember-meta-meta
 
 Set desired metas in your controller setup :
 
