@@ -1,3 +1,11 @@
+# 0.2
+
+- Improve addon structure as scaffolded by ember-cli 2.4
+- Fix compatibility with ember 2.x
+  - Change `Ember.keys` to `Object.keys`
+  - Remove usage of `Ember.EnumerableUtils`
+  - `instance-intializers` vs `initializers`
+
 # 0.1.2
 
 Fix support for Open Graph using `property` vs `name` (#2).

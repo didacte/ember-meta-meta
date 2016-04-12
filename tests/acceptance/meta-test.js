@@ -1,20 +1,8 @@
-import { test } from 'ember-qunit';
-import { module } from 'qunit';
-import startApp from '../helpers/start-app';
+import { test } from 'qunit';
+import moduleForAcceptance from '../../tests/helpers/module-for-acceptance';
 import { title, description, metaName, metaProperty } from '../helpers/document-meta';
-import Ember from 'ember';
 
-var App, Router;
-
-module('ember-meta-meta', {
-  setup: function() {
-    App = startApp();
-    Router = App.__container__.lookup('router:main');
-  },
-  teardown: function() {
-    Ember.run(App, 'destroy');
-  }
-});
+moduleForAcceptance('Acceptance | meta');
 
 test('Default values', function(assert) {
   assert.expect(3);
@@ -70,3 +58,4 @@ test('Visit all pages', function(assert) {
     assert.equal(metaProperty('og:image'), null);
   });
 });
+

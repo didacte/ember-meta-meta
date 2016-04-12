@@ -67,3 +67,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for more details on contributing and runn
 ## Credits
 
 Jean-Philippe Doyle
+Jimmy Bourassa
