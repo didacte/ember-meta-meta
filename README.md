@@ -16,11 +16,10 @@ Set desired metas in your controller setup :
 ```js
 export default Ember.Route.extend({
   setupController: function (controller, model) {
-    this.get('meta').update({
+    this.meta.setMetas({
       title: 'This Is News Title',
       description: 'This Is News Description',
-      'og:image': 'https://exemple.net/latest-news.png',
-      'twitter:author': '@j15e'
+      'og:image': 'https://exemple.net/latest-news.png'
     });
   }
 });
