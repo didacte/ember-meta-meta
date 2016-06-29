@@ -1,4 +1,9 @@
-# 0.2
+# 0.3.0
+
+- Update examples to work with latest EmberJS
+- Update to modern syntax
+
+# 0.2.0
 
 - Improve addon structure as scaffolded by ember-cli 2.4
 - Fix compatibility with ember 2.x
