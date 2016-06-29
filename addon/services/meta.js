@@ -1,53 +1,53 @@
 import Ember from 'ember';
+const {Service} = Ember;
 
-export default Ember.Service.extend({
+export default Service.extend({
   /**
-    Store the default document title
+   Store the default document title
 
-    @method storeDefaultTitle
-  */
-  storeDefaultTitle: function() {
+   @method storeDefaultTitle
+   */
+  storeDefaultTitle() {
     this.set('defaultTitle', window.document.title);
   },
 
   /**
-    Set metas to be injected
+   Set metas to be injected
 
-    For exemple :
+   For exemple :
 
-    ```js
-      this.get('meta').update({
+   ```js
+   this.get('meta').update({
         title: 'This Is News Title',
         description: 'This Is News Description',
         'og:image': 'https://exemple.net/latest-news.png'
       });
-    ```
+   ```
 
-    @method update
-    @param {Object} attributes
-  */
-  update: function(attributes) {
+   @method update
+   @param {Object} attributes
+   */
+  update(attributes) {
     this.set('attributes', attributes);
   },
 
   /**
-    Inject given metas in document after completed didTransition
+   Inject given metas in document after completed didTransition
 
-    @method insert
-  */
-  insert: function() {
-    var self = this,
-        attributes = this.get('attributes') || { title: this.get('defaultTitle') },
-        metas = document.querySelectorAll('meta[data-meta-meta="true"]');
+   @method insert
+   */
+  insert() {
+    const attributes = this.get('attributes') || {title: this.get('defaultTitle')};
+    const metas = document.querySelectorAll('meta[data-meta-meta="true"]');
 
     // Remove previously set metas
-    for(var i = 0; i < metas.length; i++) {
+    for (let i = 0; i < metas.length; i++) {
       metas[i].removeAttribute('content');
     }
 
     // Set new metas
-    Object.keys(attributes).forEach(function(key){
-      self.setMeta(key, attributes[key]);
+    Object.keys(attributes).forEach((key) => {
+      this.setMeta(key, attributes[key]);
     });
 
     // Reset for next transition
@@ -55,28 +55,28 @@ export default Ember.Service.extend({
   },
 
   /**
-    Returns the title, exists solely to be reopen for your needs
+   Returns the title, exists solely to be reopen for your needs
 
-    @method title
-  */
-  title: function(value) {
+   @method title
+   */
+  title(value) {
     return value;
   },
 
   /**
-    Inject given meta in document.
+   Inject given meta in document.
 
-    Exemple :
+   Exemple :
 
-    ```js
-      self.router.setMeta('title', 'Homepage of the Crew');
-    ```
+   ```js
+   self.router.setMeta('title', 'Homepage of the Crew');
+   ```
 
-    @method setMetas
-    @param {Object} attributes
-  */
-  setMeta: function(name, value) {
-    var meta, key;
+   @method setMetas
+   @param {Object} attributes
+   */
+  setMeta(name, value) {
+    let meta, key;
 
     if (name === 'title') {
       window.document.title = this.title(value);
@@ -85,7 +85,7 @@ export default Ember.Service.extend({
       meta = document.querySelector('meta[' + key + '="' + name + '"]');
 
       // Create meta tag if does not exist
-      if(!meta) {
+      if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute(key, name);
         document.getElementsByTagName('head')[0].appendChild(meta);
