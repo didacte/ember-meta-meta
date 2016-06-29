@@ -15,7 +15,7 @@ Set desired metas in your controller setup :
 
 ```js
 export default Ember.Route.extend({
-  setupController: function (controller, model) {
+  afterModel() {
     this.get('meta').update({
       title: 'This Is News Title',
       description: 'This Is News Description',
@@ -37,24 +37,36 @@ Will result into this HTML (open graph metas are using property automatically) :
 
 Title & metas are set only on `didTransition` in case the route would be canceled.
 
+**Note**: og tags will not correctly work without using FastBoot or some sort of server side rendering.
+
 ## Advanced options
+
+You can use an instance initializer to add the following:
 
 - `defaultTitle` : Default title set when none is provided by route.
 - `@title(value)` : Override the title function to append, prefix, etc.
 
+Just run:
+
+`ember g instance-initializer after-meta`
+
+Then in the resulting initializer, do the following:
+
 ```js
+export function initialize(appInstance) {
+  const meta = appInstance.lookup('service:meta');
+  meta.set('defaultTitle', 'My Custom Default Title');
+  meta.reopen({
+    title: function(value){
+      return value + ' - My Website';
+    }
+  });
+}
+
 export default {
   after: 'meta',
-  name: 'defaults',
-  initialize: function(container, application) {
-    var meta = container.lookup('meta:main');
-    meta.set('defaultTitle', 'My Custom Default Title');
-    meta.reopen({
-      title: function(value){
-        return value + ' - My Website';
-      }
-    });
-  }
+  name: 'after-meta',
+  initialize
 };
 ```
 
