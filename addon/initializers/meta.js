@@ -1,7 +1,7 @@
 export default {
   name: 'meta',
 
-  initialize: function(app, oldApp) {
+  initialize(app, oldApp) {
     // Ember 1.3 compat
     if(oldApp.inject) {
       oldApp.inject('route', 'meta', 'service:meta');

@@ -1,13 +1,13 @@
 export default {
   name: 'meta',
 
-  initialize: function(applicationInstance) {
+  initialize(applicationInstance) {
     const meta = lookup(applicationInstance, 'service:meta');
 
     meta.storeDefaultTitle();
 
     // Bind on didTransition
-    lookup(applicationInstance, 'router:main').on('didTransition', function() {
+    lookup(applicationInstance, 'router:main').on('didTransition', () => {
       meta.insert();
     });
   }
@@ -15,7 +15,7 @@ export default {
 
 function lookup(applicationInstance, name) {
   // Ember 2.x
-  if(applicationInstance.lookup) {
+  if (applicationInstance.lookup) {
     return applicationInstance.lookup(name);
   }
 
