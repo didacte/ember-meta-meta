@@ -37,7 +37,7 @@ Will result into this HTML (open graph metas are using property automatically) :
 
 Title & metas are set only on `didTransition` in case the route would be canceled.
 
-**Note**: og tags will not correctly work without using FastBoot or some sort of server side rendering.
+**Note**: Open Graph tags, for sharing on Facebook or Twitter, will not correctly work without using [FastBoot](https://www.ember-fastboot.com/) or some sort of server side rendering. All Google tags and data will work fine though because Google executes the JS.
 
 ## Advanced options
 
