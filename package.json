@@ -1,7 +1,7 @@
 {
   "name": "ember-meta-meta",
   "version": "0.3.0",
-  "description": "Add sane metas to your Ember frontend application.",
+  "description": "Set meta tags (title, description, og, open graph, twitter card, etc) in routes.",
   "directories": {
     "doc": "doc",
     "test": "tests"
