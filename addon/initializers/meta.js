@@ -1,14 +1,9 @@
 export default {
   name: 'meta',
 
-  initialize(app, oldApp) {
-    // Ember 1.3 compat
-    if(oldApp.inject) {
-      oldApp.inject('route', 'meta', 'service:meta');
-    }
-    // Ember 2.x
-    else {
-      app.inject('route', 'meta', 'service:meta');
-    }
+  initialize() {
+    // Support Ember 2.x and 1.1.13
+    const app = arguments.length > 1 ? arguments[1] : arguments[0];
+    app.inject('route', 'meta', 'service:meta');
   }
 };

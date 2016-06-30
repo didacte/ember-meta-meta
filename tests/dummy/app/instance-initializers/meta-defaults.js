@@ -1,11 +1,11 @@
 export default {
   after: 'meta',
   name: 'meta-defaults',
-  initialize: function(applicationInstance) {
+  initialize(applicationInstance) {
     const meta = lookup(applicationInstance, 'service:meta');
     meta.set('defaultTitle', 'My Custom Default Title');
     meta.reopen({
-      title: function(value) {
+      title(value) {
         return value + ' - My Website';
       }
     });

@@ -1,7 +1,8 @@
 import Ember from 'ember';
+const {Route} = Ember;
 
-export default Ember.Route.extend({
-  setupController: function() {
+export default Route.extend({
+  afterModel() {
     this.get('meta').update({
       title: 'This Is News Title',
       description: 'This Is News Description',
