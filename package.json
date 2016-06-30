@@ -1,6 +1,6 @@
 {
   "name": "ember-meta-meta",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Set meta tags (title, description, og, open graph, twitter card, etc) in routes.",
   "directories": {
     "doc": "doc",

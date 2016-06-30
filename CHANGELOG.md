@@ -1,3 +1,8 @@
+# 0.3.1
+
+- Fix EmberJS 2 deprecations
+- Suggest using service in afterModel rather than setupController
+
 # 0.3.0
 
 - Update examples to work with latest EmberJS
