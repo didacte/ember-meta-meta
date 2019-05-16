@@ -6,8 +6,6 @@ dependencies:
   pre:
     - npm config set spin false
     - npm install -g npm@^2
-    - npm install -g bower
     - npm install
-    - bower install
   cache_directories:
     - 'node_modules'
